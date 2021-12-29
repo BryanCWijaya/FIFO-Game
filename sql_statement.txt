@@ -1,0 +1,56 @@
+CREATE TABLE scores(
+    username       TEXT,
+    level          INT,
+    book_obtained  INT,
+    wrong_press    INT,
+    score          INT
+);
+
+CREATE TABLE users(
+   username      TEXT PRIMARY KEY,
+   email         TEXT,
+   password      TEXT,
+   level         INT,
+   last_online   TEXT
+);
+
+CREATE TABLE friends(
+   username         TEXT,
+   friend_username  TEXT
+);
+
+CREATE TABLE friend_request(
+   from_         TEXT,
+   to_           TEXT
+);
+
+CREATE TABLE level_details(
+   id                  INT PRIMARY KEY,
+   level               TEXT,
+   num_of_book         INT,
+   num_of_large_book   INT,
+   max_book_strength   INT,
+   min_score           INT
+);
+
+INSERT INTO level_details VALUES(0, "Tutorial", 4, 0, 0, 0);
+
+INSERT INTO level_details VALUES(1, "Level 1", 500, 0, 0, 10000);
+
+INSERT INTO level_details VALUES(2, "Level 2", 500, 0, 0, 25000);
+
+INSERT INTO level_details VALUES(3, "Level 3", 500, 0, 0, 75000);
+
+INSERT INTO level_details VALUES(4, "Level 4", 500, 50, 2, 75000);
+
+INSERT INTO level_details VALUES(5, "Level 5", 500, 50, 2, 150000);
+
+INSERT INTO level_details VALUES(6, "Level 6", 500, 50, 3, 175000);
+
+INSERT INTO level_details VALUES(7, "Level 7", 500, 100, 5, 200000);
+
+INSERT INTO level_details VALUES(8, "Level 8", 500, 100, 5, 150000);
+
+INSERT INTO level_details VALUES(9, "Level 9", 500, 200, 5, 150000);
+
+INSERT INTO level_details VALUES(10, "Level 10", 500, 400, 8, 150000);
